@@ -28,7 +28,7 @@ function NoteFormModal(props) {
         <textarea
           name="content"
           required={true}
-          defaultValue={props.title || ""}
+          defaultValue={props.content || ""}
         ></textarea>
         <div>
           <button type="submit" className="note-form-submit-btn">
