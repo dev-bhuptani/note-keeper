@@ -9,7 +9,10 @@ function Note(props) {
       >
         <span>Delete</span>
       </div>
-      <div className="note-edit">
+      <div
+        className="note-edit"
+        onClick={props.editNoteFormModal.bind(this, props.id)}
+      >
         <span>Edit</span>
       </div>
     </div>

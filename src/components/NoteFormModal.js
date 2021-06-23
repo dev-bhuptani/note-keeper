@@ -1,9 +1,14 @@
 function NoteFormModal(props) {
   const noteFormSubmitHandler = event => {
     event.preventDefault();
-    props.addNote(event.target[0].value, event.target[1].value);
+    if (props.noteEditMode) {
+      props.editNote(event.target[0].value, event.target[1].value);
+    } else {
+      props.addNote(event.target[0].value, event.target[1].value);
+    }
     props.toggleNoteFormModal(false);
   };
+
   return (
     <>
       <div
@@ -13,12 +18,21 @@ function NoteFormModal(props) {
       <form className="note-form" onSubmit={noteFormSubmitHandler}>
         <h1>Add Note</h1>
         <label>Title</label>
-        <input type="text" name="title" required={true} />
+        <input
+          type="text"
+          name="title"
+          required={true}
+          defaultValue={props.title || ""}
+        />
         <label>Content</label>
-        <textarea name="content" required={true}></textarea>
+        <textarea
+          name="content"
+          required={true}
+          defaultValue={props.title || ""}
+        ></textarea>
         <div>
           <button type="submit" className="note-form-submit-btn">
-            Add Note
+            {props.noteEditMode ? "Edit Note" : "Add Note"}
           </button>
           <button
             className="note-form-cancel-btn"
