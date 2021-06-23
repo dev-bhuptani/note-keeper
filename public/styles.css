@@ -42,8 +42,8 @@ footer p {
   background: #fff;
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
-  padding: 10px;
-  width: 240px;
+  padding: 1rem;
+  width: 20rem;
   margin: 16px;
   float: left;
 }
@@ -78,6 +78,10 @@ footer p {
   padding: 2rem;
 }
 
+.note-form h1 {
+  text-align: center;
+}
+
 .note-form input,
 .note-form textarea {
   width: 100%;
@@ -96,8 +100,25 @@ footer p {
   font-weight: bold;
 }
 
-.note-form button {
-  margin-top: 1.5rem;
+.note-form-cancel-btn {
+  float: right;
+  width: 30%;
+  margin: 1.5rem;
+  height: 3rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  border: 0.1rem solid #f5ba13;
+  border-radius: 1rem;
+  color: #f5ba13;
+  background-color: white;
+  display: inline;
+}
+
+.note-form-submit-btn {
+  float: right;
+  display: inline;
+  width: 30%;
+  margin: 1.5rem;
   height: 3rem;
   background-color: #f5ba13;
   font-weight: bold;
@@ -107,8 +128,10 @@ footer p {
   border-radius: 1rem;
 }
 
-.note-edit {
+.note-edit,
+.note-delete {
   float: right;
+  margin: 0.2rem;
 }
 
 .backdrop {

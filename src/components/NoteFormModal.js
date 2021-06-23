@@ -11,11 +11,22 @@ function NoteFormModal(props) {
         onClick={props.toggleNoteFormModal.bind(this, false)}
       ></div>
       <form className="note-form" onSubmit={noteFormSubmitHandler}>
+        <h1>Add Note</h1>
         <label>Title</label>
         <input type="text" name="title" required={true} />
         <label>Content</label>
         <textarea name="content" required={true}></textarea>
-        <button type="submit">Add Note </button>
+        <div>
+          <button type="submit" className="note-form-submit-btn">
+            Add Note
+          </button>
+          <button
+            className="note-form-cancel-btn"
+            onClick={props.toggleNoteFormModal.bind(this, false)}
+          >
+            Cancel
+          </button>
+        </div>
       </form>
     </>
   );
