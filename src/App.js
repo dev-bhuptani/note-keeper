@@ -18,6 +18,15 @@ function App() {
     setNotes(localArr);
   };
 
+  const deleteNote = id => {
+    const localArr = [...notes];
+    const index = localArr.findIndex(ele => {
+      return ele.id === id;
+    });
+    localArr.splice(index, 1);
+    setNotes(localArr);
+  };
+
   return (
     <>
       <Header toggleNoteFormModal={toggleNoteFormModalHandler} />
@@ -29,7 +38,13 @@ function App() {
       ) : null}
       {notes.length > 0
         ? notes.map(note => (
-            <Note key={note.id} title={note.title} content={note.content} />
+            <Note
+              key={note.id}
+              title={note.title}
+              content={note.content}
+              id={note.id}
+              deleteNote={deleteNote}
+            />
           ))
         : null}
     </>
