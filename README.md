@@ -5,6 +5,7 @@ As of now, I store all notes in React state, so notes won't be saved permanently
 
 Technology used: **React.js**  
   
-To run the app, first install all node modules by running <code>npm install</code>. And after that, simply run the app by running <code>npm start</code>
+To run the app, first install all node modules by running <code>npm install</code>.  
+And after that, simply run the app by running <code>npm start</code>
   
 _**Stay tuned for future updates!**_
