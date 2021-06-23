@@ -16,7 +16,7 @@ header {
   justify-content: space-between;
   background-color: #f5ba13;
   margin: auto -16px;
-  padding: 16px 32px;
+  padding: 16px 20rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
@@ -24,6 +24,17 @@ header h1 {
   color: #fff;
   font-family: "McLaren", cursive;
   font-weight: 200;
+}
+
+header button {
+  border: none;
+  background-color: #f5ba13;
+  color: white;
+  font-size: 1.25rem;
+}
+
+header button:hover {
+  cursor: pointer;
 }
 
 footer {
@@ -100,38 +111,41 @@ footer p {
   font-weight: bold;
 }
 
-.note-form-cancel-btn {
+.note-form-cancel-btn,
+.note-form-submit-btn {
   float: right;
   width: 20%;
   margin: 1.5rem;
   height: 3rem;
   font-weight: bold;
   font-size: 1.25rem;
-  border: 0.1rem solid #f5ba13;
   border-radius: 1rem;
-  color: #f5ba13;
-  background-color: white;
   display: inline;
 }
 
+.note-form-cancel-btn {
+  border: 0.1rem solid #f5ba13;
+  color: #f5ba13;
+  background-color: white;
+}
+
 .note-form-submit-btn {
-  float: right;
-  display: inline;
-  width: 20%;
-  margin: 1.5rem;
-  height: 3rem;
-  background-color: #f5ba13;
-  font-weight: bold;
-  font-size: 1.25rem;
-  color: white;
   border: none;
-  border-radius: 1rem;
+  color: white;
+  background-color: #f5ba13;
 }
 
 .note-edit,
 .note-delete {
   float: right;
-  margin: 0.2rem;
+  margin: 0 0.5rem;
+  color: #f5ba13;
+  font-size: 1.4rem;
+}
+
+.note-edit:hover,
+.note-delete:hover {
+  cursor: pointer;
 }
 
 .backdrop {

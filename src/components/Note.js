@@ -6,14 +6,20 @@ function Note(props) {
       <div
         className="note-delete"
         onClick={props.deleteNote.bind(this, props.id)}
+        title="Delete Note"
       >
-        <span>Delete</span>
+        <span>
+          <i className="fa fa-trash" aria-hidden="true"></i>
+        </span>
       </div>
       <div
         className="note-edit"
         onClick={props.editNoteFormModal.bind(this, props.id)}
+        title="Edit Note"
       >
-        <span>Edit</span>
+        <span>
+          <i className="fa fa-pencil"></i>
+        </span>
       </div>
     </div>
   );
